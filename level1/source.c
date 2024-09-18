@@ -2,15 +2,16 @@
 #include <string.h>
 #include <stdlib.h>
 
-int	main(int argc, char **argv, char **envp)
+int	main(void)
 {
 	char	buf[100] = {0};
 	char	*s1 = "Good job.\n";
 	char	*s2 = "Nope.\n";
+	char	*password = "__stack_check";
 
 	printf("Please enter key: ");
 	scanf("%s", buf);
-	if (strcmp(buf, argv[1]) == 0)
+	if (strcmp(buf, password) == 0)
 	{
 		printf("%s", s1);
 		return (0);
